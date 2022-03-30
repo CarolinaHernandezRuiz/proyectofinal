@@ -1,0 +1,84 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block contenido %}
+			<!-- Begin bread crumbs -->
+			<nav class="bread-crumbs">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<ul class="bread-crumbs-list">
+								<li>
+									<a href="{% url 'Inicio' %}">Inicio</a>
+									<i class="material-icons md-18">chevron_right</i>
+								</li>
+							
+								<li><a href="#!">politica de privacidad</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav><!-- End bread crumbs -->
+
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-heading heading-center">
+								<h1>politica de privacidad</h1>
+							</div>
+							<div class="content">
+								<p>Fecha de vigencia: 22 de marzo de 2022</p>
+								<p>EmpleosTI ("nosotros", "nosotros" o "nuestro") opera el sitio web (el "Servicio").</p>
+								<p>Esta página le informa sobre nuestras políticas con respecto a la recopilación, el uso 
+									y la divulgación de datos personales cuando utiliza nuestro Servicio y las opciones que 
+									tiene asociadas con esos datos. Nuestra Política de privacidad para PathSoft se crea con la ayuda.</p>
+							
+								<p>Utilizamos sus datos para proporcionar y mejorar el Servicio. Al usar el Servicio, usted acepta la 
+									recopilación y el uso de información de acuerdo con esta política. A menos que se defina lo contrario 
+									en esta Política de privacidad, los términos utilizados en esta Política de privacidad tienen los mismos 
+									significados que en nuestros Términos y condiciones, accesibles desde el sitio</p>
+							
+								<h2>Recopilación y uso de información</h2>
+							
+								<p>Recopilamos varios tipos diferentes de información para varios propósitos para brindarle y mejorar nuestro Servicio.
+								</p>
+							
+								<h3>Tipos de datos recopilados</h3>
+							
+								<h4>Información personal</h4>
+							
+								<p>Mientras usa nuestro Servicio, podemos pedirle que nos proporcione cierta información de identificación personal 
+									que se puede usar para contactarlo o identificarlo ("Datos personales"). La información de identificación personal 
+									puede incluir, entre otros:</p>
+							
+								<ul>
+									<li>Dirección de correo electrónico</li>
+									<li>Dirección, estado, provincia, código postal, ciudad</li>
+									<li>Cookies y datos de uso</li>
+								</ul>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<a class="bff d-none d-md-block" href="https://cvapp.es/">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="bff-container">
+                    <p>ESTAS BUSCANDO TU PROXIMO EMPLEO</p>
+                    <div class="btn btn-border btn-small">
+                        <span>Descarga Curriculo</span>
+                        <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="assets/img/sprite.svg#arrow-right"></use></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+{% endblock %}

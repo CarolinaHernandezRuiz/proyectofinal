@@ -1,0 +1,160 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block contenido %}
+
+			<!-- Begin bread crumbs -->
+			<nav class="bread-crumbs">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<ul class="bread-crumbs-list">
+								<li>
+									<a href="{% url 'Inicio' %}">Inicio</a>
+									<i class="material-icons md-18">chevron_right</i>
+								</li>
+								<li><a href="{% url 'Noticias' %}">Empleos</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav><!-- End bread crumbs -->
+
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-heading heading-center">
+								<div class="section-subheading">Busqueda realizada para <b>{{ query }}</b></div>
+								<h1>Resultado encontrado</h1>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-12 item">
+							<!-- Begin news item -->
+							<article class="news-item item-style">
+								<div class="news-item-info">
+									<a href="news-post.html" class="news-item-img">
+										<img data-src="{% static 'assets/img/news-img-1.jpg' %}" class="lazy" src="{% static 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' %}" alt="">
+									</a>
+									<h2 class="news-item-heading item-heading">
+										<a href="{% url 'NoticiasPublicadas' %}" title="Benefits Of Async/Await">Especialista en Ciberseguridad. </a>
+									</h2>
+									<div class="news-item-desc">
+										<p>Este profesional es el encargado de la privacidad y protección de datos de las empresas. El rango de sueldo mensual es entre $35,000 y $45,000 pesos.</p>
+									</div>
+								</div>
+							</article><!-- End news item -->
+						</div>
+						<div class="col-lg-4 col-md-6 col-12 item">
+							<!-- Begin news item -->
+							<article class="news-item item-style">
+								<div class="news-item-info">
+									<a href="news-post.html" class="news-item-img">
+										<img data-src="{% static 'assets/img/news-img-2.jpg' %}" class="lazy" src="{% static 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' %}" alt="">
+									</a>
+									<h2 class="news-item-heading item-heading">
+										<a href="{% url 'NoticiasPublicadas' %}" title="Key Considerations Of IPaaS">Arquitecto de Software.</a>
+									</h2>
+									<div class="news-item-desc">
+										<p>Es un experto que dicta estándares técnicos para el diseño de software, de acuerdo a las políticas de una empresa y también es el responsable de la toma de decisiones de alto nivel en el proceso de desarrollo. El rango de sueldo mensual es entre $40,000 y $45,000 pesos.</p>
+									</div>
+								</div>
+							</article><!-- End news item -->
+						</div>
+						<div class="col-lg-4 col-md-6 col-12 item">
+							<!-- Begin news item --> 
+							<article class="news-item item-style">
+								<div class="news-item-info">
+									<a href="news-post.html" class="news-item-img">
+										<img data-src="{% static 'assets/img/news-img-3.jpg' %}" class="lazy" src="{% static 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' %}" alt="">
+									</a>
+									<h2 class="news-item-heading item-heading">
+										<a href="{% url 'NoticiasPublicadas' %}" title="Hibernate Query Language">Gerente de Proyecto TIC.</a>
+									</h2>
+									<div class="news-item-desc">
+										<p>Es el profesional responsable de planear, organizar y delimitar la responsabilidad de proyectos de tecnologías de información y comunicaciones (TIC). El rango de sueldo mensual es entre $30,000 y $40,000 pesos.</p>
+									</div>
+								</div>
+							</article><!-- End news item -->
+						</div>
+						<div class="col-lg-4 col-md-6 col-12 item">
+							<!-- Begin news item -->
+							<article class="news-item item-style">
+								<div class="news-item-info">
+									<a href="news-post.html" class="news-item-img">
+										<img data-src="{% static 'assets/img/news-img-3.jpg' %}" class="lazy" src="{% static 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' %}" alt="">
+									</a>
+									<h2 class="news-item-heading item-heading">
+										<a href="{% url 'NoticiasPublicadas' %}" title="Benefits Of Async/Await">Desarrollador de Salesforce</a>
+									</h2>
+									<div class="news-item-desc">
+										<p> Es un especialista capaz de adaptar las funcionalidades del CRM Salesforce a las necesidades de una empresa. El rango de sueldo mensual es entre $30,000 y $40,000 pesos.</p>
+									</div>
+								</div>
+							</article><!-- End news item -->
+						</div>
+						<div class="col-lg-4 col-md-6 col-12 item">
+							<!-- Begin news item -->
+							<article class="news-item item-style">
+								<div class="news-item-info">
+									<a href="news-post.html" class="news-item-img">
+										<img data-src="{% static 'assets/img/news-img-2.jpg' %}" class="lazy" src="{% static 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' %}" alt="">
+									</a>
+									<h2 class="news-item-heading item-heading">
+										<a href="{% url 'NoticiasPublicadas' %}" title="Key Considerations Of IPaaS">Desarrollador de Java. </a>
+									</h2>
+									<div class="news-item-desc">
+										<p>Es un especialista en desarrollo de soluciones con el lenguaje de programación Java, que es el más popular para aplicaciones de smartphones Android y entre los favoritos para el desarrollo de soluciones IoT. El rango de sueldo mensual es entre $25,000 y $30,000 peso</p>
+									</div>
+								</div>
+							</article><!-- End news item -->
+						</div>
+						<div class="col-lg-4 col-md-6 col-12 item">
+							<!-- Begin news item -->
+							<article class="news-item item-style">
+								<div class="news-item-info">
+									<a href="news-post.html" class="news-item-img">
+										<img data-src="{% static 'assets/img/news-img-1.jpg' %}" class="lazy" src="{% static 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' %}" alt="">
+									</a>
+									<h2 class="news-item-heading item-heading">
+										<a href="{% url 'NoticiasPublicadas' %}" title="Hibernate Query Language">Científico de datos.</a>
+									</h2>
+									<div class="news-item-desc">
+										<p>Es un profesional con conocimientos matemáticos, estadísticos y de programación que analiza e interpreta grandes volúmenes de información provenientes tanto de fuentes estructuradas El rango de sueldo mensual es entre $15,000 y $25,000 pesos.</p>
+									</div>
+								</div>
+							</article><!-- End news item -->
+						</div>
+						<div class="col-12">
+							<!-- Begin pagination -->
+<nav class="pagination">
+    <ul class="pagination-list">
+        <li class="pagination-item-arrow pagination-item-arrow-prev pagination-item-disabled"><a href="#!"><i class="material-icons md-24">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+
+        <li class="pagination-item-arrow pagination-item-arrow-next"><a href="#!"><i class="material-icons md-24">chevron_right</i></a></li>
+    </ul>
+</nav><!-- End pagination -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<a class="bff d-none d-md-block" href="https://cvapp.es/">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="bff-container">
+                    <p>ESTAS BUSCANDO TU PROXIMO EMPLEO</p>
+                    <div class="btn btn-border btn-small">
+                        <span>Descarga Curriculo</span>
+                        <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="assets/img/sprite.svg#arrow-right"></use></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+{% endblock %}

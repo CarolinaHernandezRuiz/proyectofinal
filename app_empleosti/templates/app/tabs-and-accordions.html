@@ -1,0 +1,100 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block contenido %}
+			<!-- Begin bread crumbs -->
+			<nav class="bread-crumbs">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<ul class="bread-crumbs-list">
+								<li>
+									<a href="{% url 'Inicio' %}">Inicio</a>
+									<i class="material-icons md-18">chevron_right</i>
+								</li>
+								<li><a href="#!">Empresas</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav><!-- End bread crumbs -->
+
+			<section class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-heading heading-center">
+								<div class="section-subheading">Empresas</div>
+								<h2>Empresas que publican sus vacantes</h2>
+							</div>
+							<div class="accordion">
+								<div class="row gutters-default">
+									<div class="col-lg-6 col-12">
+										<ul class="accordion-list">
+											<li class="accordion-item section-bgc">
+												<div class="accordion-trigger">Accenture</div>
+												<div class="accordion-content content">
+													<p>Accenture Limited es una empresa multinacional de consultoría estratégica, servicios tecnológicos y externalización. Fue constituida en Hamilton, Bermudas, aunque el día 26 de mayo de 2009 se anunció la aprobación por parte del comité ejecutivo del traslado de su domicilio social a Irlanda.</p>
+												</div>
+											</li>
+											<li class="accordion-item section-bgc">
+												<div class="accordion-trigger">Indra</div>
+												<div class="accordion-content content">
+													<p>Indra Sistemas, S.A., más conocida como Indra, es una empresa multinacional española que ofrece servicios de consultoría sobre transporte, defensa, energía, telecomunicaciones, servicios financieros; así como servicios al sector público, y está presidida por Marc Murtra.</p>
+												</div>
+											</li>
+											<li class="accordion-item section-bgc">
+												<div class="accordion-trigger">Teleperformance</div>
+												<div class="accordion-content content">
+													<p>Teleperformance SE es una empresa omnicanal con sede en Francia. La compañía brinda gestión de adquisición de clientes, atención al cliente, soporte técnico, cobro de deudas, servicios de redes sociales y otros servicios. Opera en 88 países y atiende a 170 mercados</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="col-lg-6 col-12">
+										<ul class="accordion-list">
+											<li class="accordion-item section-bgc">
+												<div class="accordion-trigger">ValuGlobal</div>
+												<div class="accordion-content content">
+													<p>Somos una empresa que ofrece servicios de consultoría de Negocios, TI y Gente, enfocada en la generación de valor y bienestar para nuestros clientes y socios de negocio al ayudarlos a cumplir con sus objetivos.</p>
+												</div>
+											</li>
+											<li class="accordion-item section-bgc">
+												<div class="accordion-trigger">Factumex</div>
+												<div class="accordion-content content">
+													<p>En FactuMex ofrecemos servicios de Facturación Electrónica con folios CFDI que puedes utilizar para emitir cualquier tipo de comprobante fiscal como facturas, timbrado de nóminas, recibos de honorarios, recibo de arrendamiento, notas de crédito, etc</p>
+												</div>
+											</li>
+											<li class="accordion-item section-bgc">
+												<div class="accordion-trigger">Cognizant</div>
+												<div class="accordion-content content">
+													<p>Cognizant Technology Solutions Corp es una multinacional estadounidense que ofrece servicios a medida en Tecnologías de la Información, consultoría y externalización de procesos de negocio.</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<a class="bff d-none d-md-block" href="https://cvapp.es/">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="bff-container">
+                    <p>ESTAS BUSCANDO TU PROXIMO EMPLEO</p>
+                    <div class="btn btn-border btn-small">
+                        <span>Descarga Curriculo</span>
+                        <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="assets/img/sprite.svg#arrow-right"></use></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+{% endblock %}

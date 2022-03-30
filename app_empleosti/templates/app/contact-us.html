@@ -1,0 +1,98 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block contenido %}
+
+			<!-- Begin bread crumbs -->
+			<nav class="bread-crumbs">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<ul class="bread-crumbs-list">
+								<li>
+									<a href="{% url 'Inicio' %}">Inicio</a>
+									<i class="material-icons md-18">chevron_right</i>
+								</li>
+								<li><a href="#!">Contacto</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav><!-- End bread crumbs -->
+
+			<div class="section">
+				<div class="container">
+					<div class="row content-items">
+						<div class="col-12">
+							<div class="section-heading">
+								<div class="section-subheading">Nosotros siempre estamos en contacto</div>
+								<h1>Contacta con nosotros</h1>
+							</div>
+						</div>
+						<div class="col-xl-4 col-md-5 content-item">
+							<div class="contact-info section-bgc">
+								<h3>Información Contacto</h3>
+								<ul class="contact-list">
+									<li>
+										<i class="material-icons md-22 footer-contact-tel">Teléfono</i>
+										<div class="footer-contact-info">
+											<a href="" class="formingHrefTel">+52 447-125-6746</a>
+										</div>
+									</li>
+									<li>
+										<i class="material-icons md-22 footer-contact-email">Email</i>
+										<div class="footer-contact-info">
+											<a href="">jaz.ceci@outlookcom</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-xl-8 col-md-7 content-item">
+							<form action="" method="post" class="contact-form contact-form-padding">
+
+								<!-- Begin hidden Field for send form -->
+								<input type="hidden" name="form_subject" value="Contact form">
+								<!-- End hidden Field for send form -->
+								<div class="row gutters-default">
+									<div class="col-12">
+										<h3>Ponerse en contacto</h3>
+									</div>
+
+
+									 {% csrf_token %}
+									 {{ form | crispy }}
+
+
+									<div class="col-12">
+										<div class="form-btn">
+											<button type="submit" class="btn btn-w240 ripple"><span>Enviar mensaje</span></button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<a class="bff d-none d-md-block" href="https://cvapp.es/">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="bff-container">
+                    <p>ESTAS BUSCANDO TU PROXIMO EMPLEO</p>
+                    <div class="btn btn-border btn-small">
+                        <span>Descarga Curriculo</span>
+                        <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="assets/img/sprite.svg#arrow-right"></use></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+
+{% endblock %}

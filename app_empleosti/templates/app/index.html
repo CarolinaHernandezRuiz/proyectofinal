@@ -1,0 +1,150 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block contenido %}
+		<!-- Begin intro -->
+<div class="section-bgc intro">
+    <div class="intro-slider">
+        <div class="intro-item" style="background-image: url({% static 'assets/img/news-img-3.jpg' %})">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="intro-content">
+                            <div class="section-heading shm-none">
+                                <p class="section-desc">BIENVENIDO A MI PAGINA</p>
+                                <h1>EMPLEOS TI</h1>
+                                <p class="section-desc"> Damos: Información, Empleos, Oportunidades y Más rendimiento.</p>
+                            </div>
+                            <div class="wrap-btn intro-btns">
+                                <a href="{% static 'https://cvapp.es/' %}" class="btn btn-with-icon btn-small ripple">
+                                    <span>Crear tu Curriculum</span>
+                                    <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="{% static 'assets/img/sprite.svg#arrow-right' %}"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- End intro -->
+
+			<!-- Begin services -->
+<section class="section services">
+    <div class="container">
+        <div class="row">
+            <div class="col-12"> 
+                <div class="section-heading heading-center">
+                    <div class="section-subheading">Área de Modelos</div>
+                    <h2>Convocatorias de Empleos</h2>
+                </div> 
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 item">
+                {% for Emple in Empleos %}
+                <a href="{% url 'Soluciones' %}" class="iitem item-style">
+                    <div class="iitem-icon">
+                        <i class="material-icons material-icons-outlined md-48" style="text-align: justify;">{{ Emple.titulo }}</i>
+                    </div>
+                    <div class="iitem-icon-bg">
+                        <i class="material-icons material-icons-outlined" style="text-align: justify;">{{ Emple.category }}</i>
+                    </div>
+                    <h3 class="iitem-heading item-heading-large" style="text-align: justify;">{{ Emple.requisitos}}</h3>
+                    <div class="iitem-desc" style="text-align: justify;">{{ Emple.oferta }}</div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section><!-- End services -->
+
+
+			<!-- Begin latest news -->
+<section class="section section-bgc">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading heading-center">
+                    <div class="section-subheading">EMPLEOS MÁS INTERESANTES</div>
+                    <h1>Empleos</h1>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 item">
+                <!-- Begin news item -->
+                <article class="news-item item-style">
+                    <div class="news-item-info">
+                        <a href="news-post.html" class="news-item-img">
+                            <img data-src="{% static 'assets/img/blog-3.jpg' %}" class="lazy" src="{% static 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' %}" alt="">
+                        </a>
+                        <h2 class="news-item-heading item-heading">
+                            <a href="{% url 'NoticiasPublicadas' %}" title="Benefits Of Async/Await">Desarrollador de Salesforce</a>
+                        </h2>
+                        <div class="news-item-desc">
+                            <p> Es un especialista capaz de adaptar las funcionalidades del CRM Salesforce a las necesidades de una empresa. El rango de sueldo mensual es entre $30,000 y $40,000 pesos.</p>
+                        </div>
+                    </div>
+                </article><!-- End news item -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 item">
+                <!-- Begin news item -->
+                <article class="news-item item-style">
+                    <div class="news-item-info">
+                        <a href="news-post.html" class="news-item-img">
+                            <img data-src="{% static 'assets/img/news-img-2.jpg' %}" class="lazy" src="{% static 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' %}" alt="">
+                        </a>
+                        <h2 class="news-item-heading item-heading">
+                            <a href="{% url 'NoticiasPublicadas' %}" title="Key Considerations Of IPaaS">Desarrollador de Java. </a>
+                        </h2>
+                        <div class="news-item-desc">
+                            <p>Es un especialista en desarrollo de soluciones con el lenguaje de programación Java, que es el más popular para aplicaciones de smartphones Android y entre los favoritos para el desarrollo de soluciones IoT. El rango de sueldo mensual es entre $25,000 y $30,000 peso</p>
+                        </div>
+                    </div>
+                </article><!-- End news item -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 item">
+                <!-- Begin news item -->
+                <article class="news-item item-style">
+                    <div class="news-item-info">
+                        <a href="news-post.html" class="news-item-img">
+                            <img data-src="{% static 'assets/img/news-img-1.jpg' %}" class="lazy" src="{% static 'data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=' %}" alt="">
+                        </a>
+                        <h2 class="news-item-heading item-heading">
+                            <a href="{% url 'NoticiasPublicadas' %}" title="Hibernate Query Language">Científico de datos.</a>
+                        </h2>
+                        <div class="news-item-desc">
+                            <p>Es un profesional con conocimientos matemáticos, estadísticos y de programación que analiza e interpreta grandes volúmenes de información provenientes tanto de fuentes estructuradas El rango de sueldo mensual es entre $15,000 y $25,000 pesos.</p>
+                        </div>
+                    </div>
+                </article><!-- End news item -->
+            </div>
+            <div class="col-12">
+                <div class="section-btns justify-content-center">
+                    <a href="{% url 'Noticias' %}" class="btn btn-with-icon btn-w240 ripple">
+                        <span>Ver todos los empleos</span>
+                        <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="{% static 'assets/img/sprite.svg#arrow-right' %}"></use></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End latest news -->
+
+		</div>
+
+		<a class="bff d-none d-md-block" href="{% static 'https://cvapp.es/' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="bff-container">
+                    <p>ESTAS BUSCANDO TU PROXIMO EMPLEO</p>
+                    <div class="btn btn-border btn-small">
+                        <span>Descarga Curriculo</span>
+                        <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="{% static 'assets/img/sprite.svg' %}"></use></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+{% endblock %}
+
