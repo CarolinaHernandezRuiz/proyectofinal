@@ -1,3 +1,3 @@
-web: gunicorn empleostii.wsgi:application --log-file- --log-level debug
-python manage.py collectstatic --noinput
+web: gunicorn empleosti.wsgi:application --log-file- --log-level debug
+python manage.py collectstatic--noinput
 manage.py migrate
