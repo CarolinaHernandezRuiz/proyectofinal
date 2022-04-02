@@ -44,13 +44,13 @@
                 {% for Emple in Empleos %}
                 <a href="{% url 'Soluciones' %}" class="iitem item-style">
                     <div class="iitem-icon">
-                        <i class="material-icons material-icons-outlined md-48" style="text-align: justify;">{{ Emple.titulo }}</i>
+                        <i class="material-icons material-icons-outlined md-48" >{{ Emple.titulo }}</i>
                     </div>
                     <div class="iitem-icon-bg">
-                        <i class="material-icons material-icons-outlined" style="text-align: justify;">{{ Emple.category }}</i>
+                        <i class="material-icons material-icons-outlined" >{{ Emple.category }}</i>
                     </div>
-                    <h3 class="iitem-heading item-heading-large" style="text-align: justify;">{{ Emple.requisitos}}</h3>
-                    <div class="iitem-desc" style="text-align: justify;">{{ Emple.oferta }}</div>
+                    <h3 class="iitem-heading item-heading-large" >{{ Emple.requisitos}}</h3>
+                    <div class="iitem-desc" >{{ Emple.oferta }}</div>
                 </a>
                 {% endfor %}
             </div>
