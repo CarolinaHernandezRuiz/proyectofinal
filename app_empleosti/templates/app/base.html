@@ -40,12 +40,18 @@
 <nav class="mmm">
     <div class="mmm-content">
         <ul class="mmm-list">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="about-us.html">Sobre Nosotros</a></li>
-            <li><a href="services.html">Servicios</a></li>
-            <li><a href="tabs-and-accordions.html">Empresas</a></li>
-            <li><a href="news.html">Empleos</a></li>
-            <li><a href="contact-us.html">Contacto</a></li>
+            <li><a href="{% url 'Inicio' %}" data-title="Inicio"><span>Inicio</span></a></li>
+            <li><a href="{% url 'SobreNosotros' %}" data-title="Sobre Nosotros"><span>Sobre Nosotros</span></a></li>
+            <li><a href="{% url 'Servicios' %}" data-title="Servicios"><span>Servicios</span></a></li>
+            <li><a href="{% url 'PestañasyAcordes' %}" data-title="Empresas"><span>Empresas</span></a></li>
+            <li><a href="{% url 'Noticias' %}" data-title="Empleos"><span>Empleos</span></a></li>
+            <li><a href="{% url 'Contactanos' %}" data-title="Contacto"><span>Contacto</span></a></li>
+            <li><a href="{% url 'registro' %}" data-title="Registro"><span>Registro</span></a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}" data-title="Logout"><span>Logout</span></a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}" data-title="Login"><span>Login</span></a></li>
+            {% endif %}
         </ul>
     </div>
 </nav><!-- End mobile main menu -->
@@ -131,6 +137,12 @@
         <li><a href="{% url 'PestañasyAcordes' %}" data-title="Empresas"><span>Empresas</span></a></li>
         <li><a href="{% url 'Noticias' %}" data-title="Empleos"><span>Empleos</span></a></li>
         <li><a href="{% url 'Contactanos' %}" data-title="Contacto"><span>Contacto</span></a></li>
+        <li><a href="{% url 'registro' %}" data-title="Registro"><span>Registro</span></a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}" data-title="Logout"><span>Logout</span></a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}" data-title="Login"><span>Login</span></a></li>
+        {% endif %}
     </ul>
 </nav><!-- End main menu -->
                 </div>

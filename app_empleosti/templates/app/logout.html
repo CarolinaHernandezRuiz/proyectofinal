@@ -1,0 +1,62 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block contenido %}
+
+			<!-- Begin bread crumbs -->
+			<nav class="bread-crumbs">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<ul class="bread-crumbs-list">
+								<li>
+									<a href="{% url 'Inicio' %}">Inicio</a>
+									<i class="material-icons md-18">chevron_right</i>
+								</li>
+								<li><a href="#!">Users</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav><!-- End bread crumbs -->
+
+			<div class="section">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-heading heading-center">
+								<div class="section-subheading">Logout</div>
+								<h1>Logout Complete</h1>
+							</div>
+							<div class="content">
+								<p>Volver al inicio<a href="{% url 'Inicio' %}">Aqui</a></p>
+							</div>
+                            <div class="content">
+								<p>Iniciar sesión nuevamente<a href="{% url 'login' %}">Aqui</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Begin advantages -->
+
+	</div>
+
+	<a class="bff d-none d-md-block" href="https://cvapp.es/">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="bff-container">
+                    <p>ESTAS BUSCANDO TU PROXIMO EMPLEO</p>
+                    <div class="btn btn-border btn-small">
+                        <span>Descarga Curriculo</span>
+                        <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9"><use xlink:href="assets/img/sprite.svg#arrow-right"></use></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</a>
+{% endblock %}
+
