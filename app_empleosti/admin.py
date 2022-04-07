@@ -27,8 +27,12 @@ class Emple_bajoAdmin(admin.ModelAdmin):
  list_filter = ["requisitos","oferta"]
  list_per_page = 8
 
+class ComentariosAdmin(admin.ModelAdmin):
+ list_display =["nombre", "telefono", "email", "comentario"]
+ list_editable = ["cometario"]
+ list_per_page = 10
 
 admin.site.register(Empleo, EmpleAdmin)
 admin.site.register(Empleo_profesional, Emple_bajoAdmin)
 admin.site.register(Empleo_bajo_nivel, Emple_bajoAdmin)
-admin.site.register(Comentarios)
+admin.site.register(Comentarios, ComentariosAdmin)

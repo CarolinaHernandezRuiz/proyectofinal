@@ -57,13 +57,15 @@
 									<div class="col-xl-4 col-12">
 										<div class="form-field">
 											<label for="remember_me" class="form-field-label">Remember me</label>
-											{{ form.remember_me}}
+											{{ form.remember_me }}
 										</div>
 									</div>
 									
-									<div class="block center">
+									<div class="form-btn">
+										     &nbsp;
 											<p><input name="submit" type="submit" value="Log in" class="btn btn-w240 ripple"></p>
-                                            <p><input name="reset" type="reset" value="Reset Form" class="btn btn-w240 ripple"></p>
+                                            &nbsp;
+											<p><input name="reset" type="reset" value="Reset Form" class="btn btn-w240 ripple"></p>
 									</div>
                                     <div class="block center">
                                         <p>¿No tienes una cuenta? Registrate <a href="{% url 'registro' %}">Aqui</a></p>
