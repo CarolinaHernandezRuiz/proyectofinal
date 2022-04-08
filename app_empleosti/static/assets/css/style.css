@@ -3374,7 +3374,7 @@ body.mmm-open .mmm {
 .section-desc {
     margin: 1.25rem auto 0 auto;
     max-width: 35rem;
-    color: var(--text-secondary);
+    color: #f5f5f7;
 }
 
 .section-btns {

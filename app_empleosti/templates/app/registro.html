@@ -24,71 +24,57 @@
 				<div class="container">
 					<div class="row content-items">
 						<div class="col-xl-8 col-md-7 content-item">
-                            <div class="col-12"><h3>Registro Usuarios</h3></div>
-							<form action="#" method="post" class="contact-form contact-form-padding">
-                                {% csrf_token %}
-                                {% if form.errors %}
-                                  <div class="alert alert-danger alert-dismissible" role="alert">
-                                      <div id="form_errors">
-                                          {% for key, value in form.errors.items %}
-                                           <strong>{{ value }}</strong>
-                                           {% endfor %}
-                                      </div>
-                                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
-                                          <span aria-hidden="true">&times:</span>
-                                      </button>
-                                  </div>
-                                {% endif %}
-								<input type="hidden" name="form_subject" value="Contact form">
-								<!-- End hidden Field for send form -->
-								<div class="row gutters-default">
-									<div class="col-xl-4 col-sm-6 col-12">
-										<div class="form-field">
-											<label for="name" class="form-field-label">Nombre<span>*</span></label>
-											<input type="text" class="form-field-input" name="{{ form.first_name.name }}" value="" autocomplete="off" required="required">
-										</div>
-									</div>
-									<div class="col-xl-4 col-sm-6 col-12">
-										<div class="form-field">
-											<label for="last_name" class="form-field-label">Last Name<span>*</span></label>
-											<input type="text" class="form-field-input mask-phone" name="{{ form.last_name.name }}" value="" autocomplete="off" required="required" id="last_name">
-										</div>
-									</div>
-									<div class="col-xl-4 col-12">
-										<div class="form-field">
-											<label for="username" class="form-field-label">Username<span>*</span></label>
-											<input type="text" class="form-field-input" name="{{ form.username.name }}" value="" autocomplete="off" required="required" id="username">
-										</div>
-									</div>
-									<div class="col-12">
-										<div class="form-field">
-											<label for="email" class="form-field-label">Email</label>
-											<input type="email"  class="form-field-input" name="{{ form.email.name }}}" value="" autocomplete="off" required="required" id="email" >
-										</div>
-									</div>
-                                    <div class="col-12">
-										<div class="form-field">
-											<label for="password" class="form-field-label">Password</label>
-											<input type="password"  class="form-field-input" name="{{ form.password1.name }}}" value="" autocomplete="off" required="required" id="password">
-										</div>
-									</div>
-                                    <div class="col-12">
-										<div class="form-field">
-											<label for="password2" class="form-field-label">Repeat Password</label>
-											<input type="password"  class="form-field-input" name="{{ form.password2.name }}}" value="" autocomplete="off" required="required" id="password2">
-										</div>
-									</div>
-									<div class="form-btn">
-                                        &nbsp;
-											<input name="submit" type="submit" value="Registrar User" class="btn btn-w240 ripple">
-                                        &nbsp; 
-                                            <input name="reset" type="reset" value="Reset Form" class="btn btn-w240 ripple">
-									</div>
-                                    <div class="block center">
-                                        <p>¿Ya tienes una cuenta? Ingresa <a href="{% url 'login' %}">Aqui</a></p>
-                                    </div>
-								</div>
-							</form>
+                            <div class="col-12">
+								<h2 class="center">Registro Usuario</h2>
+							</div>
+                             <form action="#" method="post">
+                              {% csrf_token %}
+                              {% if form.errors %}
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                              <div id="form_errors">
+                                {% for key, value in form.errors.items %}
+                                <strong>{{ value }}</strong>
+                                {% endfor %}
+                              </div>
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+            {% endif %}
+            <div class="one_third first">
+              <label for="name">Nombre <span>*</span></label>
+              <input type="text" name="{{ form.first_name.name }}" id="name" value="" size="22">
+            </div>
+            <div class="one_third">
+              <label for="last_name">Last Name <span>*</span></label>
+              <input type="text" name="{{ form.last_name.name}}" id="last_name" value="" size="22">
+            </div>
+            <div class="one_third last">
+              <label for="username">Username</label>
+              <input type="text" name="{{ form.username.name }}" id="username" value="" size="22">
+            </div>
+            <div class="one_third first">
+              <label for="email">Email</label>
+              <input type="email" name="{{ form.email.name }}" id="email" value="" size="22">
+            </div>
+            <div class="one_third">
+              <label for="password">Password</label>
+              <input type="password" name="{{ form.password1.name }}" id="password" value="" size="22">
+            </div>
+            <div class="one_third last">
+              <label for="password2">Repeat Password</label>
+              <input type="password" name="{{ form.password2.name }}" id="password2" value="" size="22">
+            </div>
+            <div class="block clear">
+              &nbsp;
+              <input name="submit" type="submit" value="Registrar User" class="btn btn-w200 ripple">
+              &nbsp;
+              <input name="reset" type="reset" value="Reset Form" class="btn btn-w200 ripple">
+            </div>
+            <div class="block center">
+              <p>¿Ya tienes una cuenta? Ingresa <a href="{% url 'login' %}"> Aquí </a></p>
+            </div>
+          </form>
 						</div>
 					</div>
 				</div>

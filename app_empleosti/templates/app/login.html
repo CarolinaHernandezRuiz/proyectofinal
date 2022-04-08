@@ -24,54 +24,44 @@
 				<div class="container">
 					<div class="row content-items">
 						<div class="col-xl-8 col-md-7 content-item">
-                            <div class="col-12"><h3>Login Usuario</h3></div>
-							<form action="#" method="post" class="contact-form contact-form-padding">
-                                {% csrf_token %}
-                                {% if form.errors %}
-                                  <div class="alert alert-danger alert-dismissible" role="alert">
-                                      <div id="form_errors">
-                                          {% for key, value in form.errors.items %}
-                                           <strong>{{ value }}</strong>
-                                           {% endfor %}
-                                      </div>
-                                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"> 
-                                          <span aria-hidden="true">&times:</span>
-                                      </button>
-                                  </div>
-                                {% endif %}
-								<input type="hidden" name="form_subject" value="Contact form">
-								<!-- End hidden Field for send form -->
-								<div class="row gutters-default">
-									<div class="col-xl-4 col-sm-6 col-12">
-										<div class="form-field">
-											<label for="username" class="form-field-label">Username</label>
-											{{ form.username }}
-										</div>
-									</div>
-									<div class="col-xl-4 col-sm-6 col-12">
-										<div class="form-field">
-											<label for="password" class="form-field-label">Password</label>
-											{{ form.password }}
-										</div>
-									</div>
-									<div class="col-xl-4 col-12">
-										<div class="form-field">
-											<label for="remember_me" class="form-field-label">Remember me</label>
-											{{ form.remember_me }}
-										</div>
-									</div>
-									
-									<div class="form-btn">
-										     &nbsp;
-											<p><input name="submit" type="submit" value="Log in" class="btn btn-w240 ripple"></p>
-                                            &nbsp;
-											<p><input name="reset" type="reset" value="Reset Form" class="btn btn-w240 ripple"></p>
-									</div>
-                                    <div class="block center">
-                                        <p>¿No tienes una cuenta? Registrate <a href="{% url 'registro' %}">Aqui</a></p>
-                                    </div>
-								</div>
-							</form>
+                            <div class="col-12">
+								<h2 class="heading uppercase btmspace-30 center">Login Usuario</h2>
+							</div>
+          <form method="POST">
+            {% csrf_token %}
+            {% if form.errors %}
+              <div class="alert alert-danger alert-dismissible" role="alert">
+                <div id="form_errors">
+                  {% for key, value in form.errors.items %}
+                    <strong>{{ value }}</strong>
+                  {% endfor %}
+                </div>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            {% endif %}
+            <div class="block">
+              <label for="username">Username</label>
+              {{ form.username }}
+            </div>
+            <div class="block ">
+              <label for="password">Password</label>
+              {{ form.password }}
+            </div>
+            <div class="block center">
+              <label for="remember_me">Remember me</label>
+              {{ form.remember_me }}
+            </div>
+            
+            <div class="block center">
+              <p><input name="submit" type="submit" value="Log In" class="btn btn-w200 ripple"></p>
+              <p><input name="reset" type="reset" value="Reset Form" class="btn btn-w200 ripple"></p>
+            </div>
+            <div class="block center">
+              <p>¿No tienes una cuenta? Registrate <a href="{% url 'registro' %}"> Aquí </a></p>
+            </div>
+          </form>
 						</div>
 					</div>
 				</div>

@@ -29,7 +29,7 @@ class Emple_bajoAdmin(admin.ModelAdmin):
 
 class ComentariosAdmin(admin.ModelAdmin):
  list_display =["nombre", "telefono", "email", "comentario"]
- list_editable = ["cometario"]
+ list_editable = ["comentario"]
  list_per_page = 10
 
 admin.site.register(Empleo, EmpleAdmin)
