@@ -487,14 +487,6 @@
 						email: "The email field is required.",
 						customemail: "The email is not a valid email."
 					},
-				},
-				submitHandler: function(form) {
-
-					$(form).trigger("reset");
-					$(".form-field").removeClass("focus");
-			
-					alert('Successfully sent!');
-		
 				}
 			});
 			

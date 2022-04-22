@@ -1,5 +1,3 @@
-from csv import list_dialects
-from re import search
 from django.contrib import admin
 from .models import Comentarios, Empleo,Empleo_profesional,Empleo_bajo_nivel
 
