@@ -6,11 +6,11 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 class ComentariosForm(forms.ModelForm):
    class Meta:
       model = Comentarios
-      fields = ("nombre", "email", "website", "comentario")
+      fields = ("nombre", "email", "telefono", "comentario")
       #fields = '__all__' 
    nombre = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-input', 'required': 'true'}))
    email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-input'}))
-   website = forms.URLField(widget=forms.URLInput(attrs={'class': 'form-input'}))
+   telefono = forms.CharField(widget=forms.URLInput(attrs={'class': 'form-input'}))
    comentario = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-input'}))
 
 class userForm(UserCreationForm):
