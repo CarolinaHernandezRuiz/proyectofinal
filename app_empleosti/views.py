@@ -38,13 +38,6 @@ def contact(request):
             datos["form"] = formulario
     return render(request, 'app/contact-us.html',datos)
 
-
-def newspost(request):
-    return render(request, 'app/news-post.html')
-
-def single(request):
-    return render(request, 'app/single-services.html')
-
 def Terminos(request):
     return render(request, 'app/terms-and-conditions.html')
 

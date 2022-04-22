@@ -2,7 +2,7 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
-from .views import CustomLoginView, Registro, about, index, services, tabsaccordions, news, contact, newspost, single, Terminos, Privacidad, buscar, Registro, CustomLoginView
+from .views import CustomLoginView, Registro, about, index, services, tabsaccordions, news, contact, Terminos, Privacidad, buscar, Registro, CustomLoginView
 from .forms import loginForm
 from django.contrib.auth import views as auth_views
 
@@ -13,8 +13,6 @@ urlpatterns = [
     path('tabsaccordions/', tabsaccordions, name='PestañasyAcordes'),
     path('news/', news, name='Noticias'),
     path('contact-us/', contact, name='Contactanos'),
-    path('news-post/', newspost, name='NoticiasPublicadas'),
-    path('single-services/', single, name='Soluciones'),
     path('terms-conditions/', Terminos, name='Terminos'),
     path('privacy-policy/', Privacidad, name='Privacidad'),
     path('buscar/', buscar, name='buscar'),
