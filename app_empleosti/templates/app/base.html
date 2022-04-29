@@ -46,6 +46,7 @@
             <li><a href="{% url 'PestañasyAcordes' %}" data-title="Empresas"><span>Empresas</span></a></li>
             <li><a href="{% url 'Noticias' %}" data-title="Empleos"><span>Empleos</span></a></li>
             <li><a href="{% url 'Contactanos' %}" data-title="Contacto"><span>Contacto</span></a></li>
+            <li><a href="/digits/" data-title="digits"><span>digits</span></a></li>
             <li><a href="{% url 'registro' %}" data-title="Registro"><span>Registro</span></a></li>
             {% if user.is_authenticated %}
             <li><a href="{% url 'logout' %}" data-title="Logout"><span>Logout</span></a></li>
@@ -136,6 +137,7 @@
         <li><a href="{% url 'Servicios' %}" data-title="Servicios"><span>Servicios</span></a></li>
         <li><a href="{% url 'PestañasyAcordes' %}" data-title="Empresas"><span>Empresas</span></a></li>
         <li><a href="{% url 'Noticias' %}" data-title="Empleos"><span>Empleos</span></a></li>
+        <li><a href="/digits/" data-title="digits"><span>digits</span></a></li>
         <li><a href="{% url 'Contactanos' %}" data-title="Contacto"><span>Contacto</span></a></li>
         <li><a href="{% url 'registro' %}" data-title="Registro"><span>Registro</span></a></li>
         {% if user.is_authenticated %}
@@ -282,13 +284,13 @@
                         <p class="footer-item-heading">Nuestros Contactos</p>
                         <ul class="footer-contacts">
                             <li>
-                                <i class="material-icons md-22 footer-contact-tel">Telefono</i>
+                                <i class="material-icons md-22 footer-contact-tel">smartphone</i>
                                 <div class="footer-contact-info">
                                     <a href="#!" class="formingHrefTel">+52 447-125-6746</a>
                                 </div>
                             </li>
                             <li>
-                                <i class="material-icons md-22 footer-contact-email">Email</i>
+                                <i class="material-icons md-22 footer-contact-email">email</i>
                                 <div class="footer-contact-info">
                                     <a href="mailto:mail@example.com">jaz.ceci@outlook.com</a>
                                 </div>

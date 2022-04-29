@@ -39,19 +39,27 @@
                     <h2>Convocatorias de Empleos</h2>
                 </div> 
             </div>
-
+             
+            {% for Emple in Empleos %}
             <div class="col-lg-4 col-md-6 col-12 item">
-                {% for Emple in Empleos %}
-                <a href="" class="iitem item-style">
-                    <div class="iitem-icon">
-                        <i class="material-icons material-icons-outlined md-48" >{{ Emple.titulo }}</i>
+                
+                <article class="news-item item-style">
+                    <div class="news-item-info">
+                        <div class="iitem-icon">
+                            <i href="" title="Benefits Of Async/Await">{{ Emple.titulo}}</i>
+                        </div>
+                        <h2 class="news-item-heading item-heading">
+                            <a href="" title="Benefits Of Async/Await">{{ Emple.category}}</a>
+                        </h2>
+                        <div class="news-item-desc">
+                            <p>{{ Emple.requisitos}}</p>
+                        </div>
+                        <div class="iitem-desc" >{{ Emple.oferta }}</div>
+                        
                     </div>
-                    <h3 class="iitem-heading item-heading-large" >{{ Emple.category}}</h3>
-                    <h4 class="iitem-heading item-heading-large" >{{ Emple.requisitos}}</h4>
-                    <div class="iitem-desc" >{{ Emple.oferta }}</div>
-                </a>
-                {% endfor %}
+                </article><!-- End news item -->
             </div>
+            {% endfor %}
         </div>
     </div>
 </section><!-- End services -->
